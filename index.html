@@ -7,15 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="Estilos.css" rel="stylesheet" type="text/css"/>
   <title>Comenzando con la fotografía</title>
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 </head>
 
 <body>
   <div class="Contenido">
     <header>
       <div class="Menu-Bar">
-        <section name="Titular">
+        <!--section name="Titular"-->
           <h1>Comenzando con la fotografía</h1>
-        </section>
+        <!--/section-->
         <nav>
           <ul>
             <li>Portada</li>
@@ -25,24 +26,25 @@
         </nav>
       </div>
     </header>
-    <section name="Imagen-Central">
-      <figure>
-        <img src="Imagenes/Imagen-Ambiente.png" alt="Rendering">
-        <figcaption>Fig1. - Rendering Arquitectonico en Cheetah 3D</figcaption>
-      </figure>
-    </section>
-    <section name="Catalog-Home">
+    <!--section name="Imagen-Central"-->
+      <div class="Imagen-Central">
+        <figure>
+          <img src="Imagenes/Imagen-Ambiente.png" alt="Rendering" width="100%">
+          <figcaption>Fig1. - Rendering Arquitectonico en Cheetah 3D</figcaption>
+        </figure>
+      </div>
+    <!--/section-->
+    <section name="Catalogo-Home">
       <div class="Catalogo-Home">
-
-        <div class="Catalogo-Imagen-Home">
-          <figure>
-            <img src="Imagenes/Imagen-Paisaje.png" alt="Retrato">
+        <div class="Catalogo-Image">
+          <figure class="Paisaje">
+            <a href="#"><img class="Paisaje" src="Imagenes/Imagen-Paisaje.png" alt="Paisaje" width="100%"></a>
             <figcaption>Fig2. - Imagen de Paisaje</figcaption>
           </figure>
         </div>
-        <div class="Catalogo-Imagen-Home">
+        <div class="Catalogo-Image">
           <figure>
-            <img src="Imagenes/Imagen-Retrato.png" alt="Retrato">
+            <img  src="Imagenes/Imagen-Retrato.png" alt="Retrato" width="100%">
             <figcaption>Fig2. - Imagen de Retrato</figcaption>
           </figure>
         </div>
