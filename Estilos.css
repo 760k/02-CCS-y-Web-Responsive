@@ -7,10 +7,14 @@ body {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  background-color: magenta;
 }
+
+/* MENU BAR*/
 
 .Menu-Bar {
   background-color: #5b7989;
+  background-color: black;
   width: 100%;
   height: 90px;
   border-radius: 10px 10px 0px 0px;
@@ -18,88 +22,49 @@ body {
   -webkit-border-radius:10px 10px 0px 0px;
 }
 
-.Imagen-Central {
-  background-color: #82c3a6;
-  width: 100%;
+.Titular {
+background-color: yellow;
+width: 50%;
+float: left;
 }
 
+nav {
+  width: 50%;
+  background-color: blue;
+  float: right;
+}
+
+.Imagen-Central {
+  background-color: #82c3a6;
+  width: 96%;
+  padding: 2%;
+  margin: 0 auto;
+}
 .Catalogo-Home {
   width: 100%;
-  max-width: 900px;
+  max-width: 898px;
   background-color: #d5c75f;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   border: solid 1px black;
-
 }
 
-.Catalogo-Image {
+div [class*="Area"]{
+  background-color: orange;
+  min-width: 300px;
+  max-width: 410px;
+  width: 50vw;
+  height: 30vh;
   transition: transform 1s;
-  width: 40%;
-  margin: 3%;
+  margin: 2%;
+  margin-bottom: 60px;
+  border: solid 1px black;
 }
 
-figure {
-  margin: 0px;
-  transition: transform 1s;
-}
-
-figure:hover {
-  transform: rotate(30deg);
-  box-shadow: #82c3a6;
+div [class*="-1"]:hover {
+  transform: rotate(10deg);
+  box-shadow: 0px 5px #888888;
   border: solid 2px black;
-}
-
-/*Tipografías*/
-figcaption {
-  font-family: Helvetica;
-  font-size: 12px;
-  line-height: 20px;
-  margin-top: 5px;
-}
-
-img {
-  box-shadow: 0px 2px;
-}
-
-h1 {
-  float: left;
-  font-family: 'Dancing Script', cursive;
-  margin-left: 17px;
-  margin-top: 25px;
-  font-size: 35px;
-  color: #FFF;
-  text-shadow: 0px 2px #02010a;
-}
-
-nav ul {
-	list-style:none;
-	font-size:25px;
-  line-height: 30px;
-  font-family: 'Dancing Script', cursive;
-  margin-left: 500px;
-  display: block;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-left: 20px;
-  margin-top: 30px;
-  text-decoration: none;
-}
-
-nav ul li a:visited {
-  text-decoration: none;
-  color: yellow;
-}
-
-nav ul li a {
-	color:red;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-	background-color:#fff;
 }
