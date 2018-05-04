@@ -1,45 +1,91 @@
 body {
-  /*background-color: #02010a;*/
-  background-color: lightgray;
+  background-color: #02010a;
 }
-
 .Contenido {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  background-color: magenta;
+  /*background-color: magenta;*/
+}
+
+img {
+  box-shadow: 0px 2px #02010a;
 }
 
 /* MENU BAR*/
-
 .Menu-Bar {
   background-color: #5b7989;
-  background-color: black;
   width: 100%;
   height: 90px;
   border-radius: 10px 10px 0px 0px;
   -moz-border-radius:10px 10px 0px 0px;
   -webkit-border-radius:10px 10px 0px 0px;
+  animation: MenuAnimado 5s;
+}
+
+@-webkit-keyframes MenuAnimado {
+  0% {
+    margin-top: 150%;
+  }
+  60% {
+    margin-top: -5%
+  }
+  100% {
+    margin-top: 0%;
+  }
 }
 
 .Titular {
-background-color: yellow;
-width: 50%;
-float: left;
+  width: 50%;
+  float: left;
+  height: 90px;
 }
-
 nav {
   width: 50%;
-  background-color: blue;
   float: right;
+  height: 90px;
+}
+nav ul {
+	list-style:none;
+	font-size: 25px;
+  font-family: 'Dancing Script', cursive;
+  margin-top: 34px;
+  color: GhostWhite;
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+  text-decoration: none;
+}
+nav ul li a {
+	color:white;
+  text-decoration: none;
+}
+nav ul li a:visited {
+  text-decoration: none;
+  color: lightgray;
+}
+nav ul li a:hover {
+  color: azure;
+}
+h1 {
+  font-family: 'Dancing Script', cursive;
+  margin-left: 15px;
+  font-size: 35px;
+  color: #FFF;
+  text-shadow: 0px 2px #02010a;
+
 }
 
+/*IMAGEN CENTRAL*/
 .Imagen-Central {
   background-color: #82c3a6;
-  width: 96%;
-  padding: 2%;
+  width: 94%;
+  padding: 3%;
   margin: 0 auto;
 }
+
+/*CATALOGO*/
 .Catalogo-Home {
   width: 100%;
   max-width: 898px;
@@ -49,22 +95,181 @@ nav {
   flex-direction: row;
   justify-content: center;
   border: solid 1px black;
+  height: auto;
 }
-
 div [class*="Area"]{
-  background-color: orange;
-  min-width: 300px;
-  max-width: 410px;
-  width: 50vw;
-  height: 30vh;
   transition: transform 1s;
+  transform: rotate(0deg);
+  padding: 0px;
+  margin:0px;
+  flex-basis: 45%;
   margin: 2%;
-  margin-bottom: 60px;
-  border: solid 1px black;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
-
-div [class*="-1"]:hover {
+div [class*="-1"]:hover{
+  transition: transform 1s;
+  -webkit-transform: rotate(10deg);
   transform: rotate(10deg);
-  box-shadow: 0px 5px #888888;
+  box-shadow: 0px 2px #82c3a6;
   border: solid 2px black;
 }
+div [class*="-2"]:hover{
+  transition: transform 1s;
+  transform: translate(20px, -5px);
+  -webkit-transform: translate(20px, -5px);
+  box-shadow: 0px 2px #82c3a6;
+  border: solid 2px black;
+}
+figure {
+  padding: 0px;
+  margin: 0px;
+}
+/*FOOTER*/
+.FooterInfo {
+  display: flex;
+  background-color: #C6d5c5;
+  width: 100%;
+  height: 120px;
+  border-radius: 0px 0px 10px 10px;
+  -moz-border-radius:0px 0px 10px 10px;
+  -webkit-border-radius:0px 0px 10px 10px;
+}
+div [class*="Columna"] {
+  flex-basis: 25%;
+  font-family: helvetica, sans-serif;
+  font-size: 13px;
+  padding:1%;
+  text-align: center;
+}
+.Social {
+  width:70%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/*PAGINAS DE IMAGENES*/
+.Catalogo-Imagenes {
+  background-color: azure;
+  width: 100%;
+  display: flex;
+  -webkit-flex-basis: 30%;
+  flex-basis: 30%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: solid 1px black;
+  height: auto;
+}
+div [class^="Catalogo-Imagen-"] {
+  width: 30%;
+  margin: 1%;
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+div [class*="-Blur"]{
+  -webkit-filter:blur(5px);
+  filter: blur(5px);
+}
+div [class*="-Gray"]{
+  -webkit-filter:grayscale(100%);
+  filter: grayscale(100%);
+}
+div [class*="-Sepia"]{
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
+}
+
+@media (max-width:900px){
+  .Menu-Bar {
+    background-color: #5b7989;
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0px 0px;
+    -moz-border-radius:10px 10px 0px 0px;
+    -webkit-border-radius:10px 10px 0px 0px;
+  }
+  .Titular {
+    text-align: center;
+    width: 100%;
+    clear: both;
+  }
+  h1 {
+    font-family: 'Dancing Script', cursive;
+    margin-left: 0px;
+    font-size: 35px;
+    color: #FFF;
+    text-shadow: 0px 2px #02010a;
+  }
+  nav {
+    width: 100%;
+    float: none;
+    clear: both;
+    height: auto;
+  }
+  nav ul {
+  	list-style:none;
+  	font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 0px;
+    color: GhostWhite;
+    margin: 0 auto;
+    padding: 15px;
+    padding-top: 25px;
+  }
+  nav ul li {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin: 0px;
+  }
+  div [class*="Area"]{
+    transition: transform 1s;
+    transform: rotate(0deg);
+    padding: 0px;
+    margin:0px;
+    flex-basis: 100%;
+    margin: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: half of the width;
+  }
+  .FooterInfo {
+    display: flex;
+    background-color: #C6d5c5;
+    width: 100%;
+    height: auto;
+    border-radius: 0px 0px 10px 10px;
+    -moz-border-radius:0px 0px 10px 10px;
+    -webkit-border-radius:0px 0px 10px 10px;
+    flex-flow: wrap;
+
+  }
+  div [class*="Columna"] {
+    flex-basis: 100%;
+    font-family: helvetica, sans-serif;
+    font-size: 13px;
+    padding:1%;
+    text-align: justify;
+    flex-grow: 2;
+    border-top: 1px solid #FFF;
+    text-align: center;
+  }
+  .Catalogo-Imagenes {
+    background-color: azure;
+    width: 100%;
+    display: flex;
+    -webkit-flex-basis: 30%;
+    flex-basis: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: solid 1px black;
+    height: auto;
+  }
+  div [class^="Catalogo-Imagen-"] {
+    width: 100%;
+    margin: 1%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+  }
